@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      FAIR-Ensemble: When Fairness Naturally Emerges From Deep Ensembling
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="abstract">
+        <div class="subtitle">
+          <p>FEB 15, 2023</p>
+        </div>
+        <p class="title">
+          FAIR-Ensemble: When Fairness Naturally Emerges From Deep Ensembling
+        </p>
+      </div>
+      <div class="paper-meta">
+        <div class="buttons">
+          <button class="paper-button">
+            <div class="button-content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="#ededee"
+                viewBox="0 0 256 256"
+              >
+                <rect width="256" height="256" fill="none"></rect>
+                <path
+                  d="M200,176V64a23.9,23.9,0,0,0-24-24H40"
+                  fill="none"
+                  stroke="#ededee"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></path>
+                <line
+                  x1="104"
+                  y1="104"
+                  x2="168"
+                  y2="104"
+                  fill="none"
+                  stroke="#ededee"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></line>
+                <line
+                  x1="104"
+                  y1="136"
+                  x2="168"
+                  y2="136"
+                  fill="none"
+                  stroke="#ededee"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></line>
+                <path
+                  d="M22.1,80A24,24,0,1,1,64,64V192a24,24,0,1,0,41.9-16h112A24,24,0,0,1,200,216H88"
+                  fill="none"
+                  stroke="#ededee"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></path>
+              </svg>
+              <div>Paper</div>
+            </div>
+          </button>
+          <button class="paper-code">
+            <div class="button-content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="#121212"
+                viewBox="0 0 256 256"
+              >
+                <rect width="256" height="256" fill="none"></rect>
+                <polyline
+                  points="64 88 16 128 64 168"
+                  fill="none"
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></polyline>
+                <polyline
+                  points="192 88 240 128 192 168"
+                  fill="none"
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></polyline>
+                <line
+                  x1="160"
+                  y1="40"
+                  x2="96"
+                  y2="216"
+                  fill="none"
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></line>
+              </svg>
+              <div>Code</div>
+            </div>
+          </button>
+          <button
+            class="paper-code"
+            onclick="location.href = 'https://colab.research.google.com/drive/1kNdgQlJdCAiOaLxYMpLhp0NoAdPZGTpJ?usp=sharing'"
+          >
+            <div class="button-content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="#121212"
+                viewBox="0 0 256 256"
+              >
+                <rect width="256" height="256" fill="none"></rect>
+                <line
+                  x1="112"
+                  y1="112"
+                  x2="176"
+                  y2="112"
+                  fill="none"
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="12"
+                ></line>
+                <line
+                  x1="112"
+                  y1="144"
+                  x2="176"
+                  y2="144"
+                  fill="none"
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></line>
+                <rect
+                  x="40"
+                  y="40"
+                  width="176"
+                  height="176"
+                  rx="8"
+                  fill="none"
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></rect>
+                <line
+                  x1="80"
+                  y1="40"
+                  x2="80"
+                  y2="216"
+                  fill="none"
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></line>
+              </svg>
+              <div>Interactive Notebook</div>
+            </div>
+          </button>
+        </div>
+        <div class="paper-meta-1">
+          <div class="authors">
+            <div class="subtitle">
+              <p>AUTHORS</p>
+            </div>
+            <div>
+              <p class="author-list">
+                Wei-Yin Ko, Daniel D`Souza, Karina Nguyen, Randall Balestriero,
+                Sara Hooker
+              </p>
+            </div>
+          </div>
+          <div class="affiliation">
+            <div class="subtitle">
+              <p>AFFILIATION</p>
+            </div>
+            <div>
+              <p class="author-list">
+                Cohere for AI Community, Meta, UC Berkeley
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="paper-meta-2">
+            <div class="subtitle">
+              <p>CITATION</p>
+            </div>
+            <div class="citation-block">
+              <p class="citation-content">
+                Ko, et al., "FAIR-Ensemble: When Fairness Naturally Emerges From
+                Deep Ensembling"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p class="subtitle-title">SUMMARY</p>
+        </div>
+        <div>
+          <p class="body-text">
+            <mark>Ensembling independent deep neural networks (DNNs)</mark> is a
+            simple and effective way to improve top-line metrics and often
+            outperforms larger single models. In this work, we explore the
+            impact of ensembling on subgroup performances, especially when the
+            individual models all share the same trainingset, architecture, and
+            design choices e.g. optimizer and regularizers. Surprisingly, even
+            with a homogeneous ensemble we find compelling and powerful gains in
+            worst-k and minority group performance, i.e. fairness naturally
+            emerges from ensembling.
+          </p>
+          <p class="body-text">
+            We show that <mark> the minority group </mark> disproportionately
+            benefits from ensembling, and the returns from ensembling continue
+            for far longer than for the majority group as more models are added.
+            While top-k performance gains plateau early after 3-4 models, we
+            observe continual gains for bottom-k beyond 20 models in some
+            settings. Our work establishes simple DNN ensembles can be a
+            powerful tool for alleviating disparate impact from DNN classifiers,
+            thus curbing algorithmic harm.
+          </p>
+          <div class="img-block"></div>
+          <div>
+            <img src="/fig1.png" />
+          </div>
+          <p class="body-text">
+            We also explore why this is the case. We find that even in
+            homogeneous ensembles, varying the sources of stochasticity through
+            parameter initialization, mini-batch sampling, and the
+            data-augmentation realizations, results in different fairness
+            outcomes. Our results are the first to our knowledge to
+            <mark
+              >link the source of training randomness to the fairness of the
+              model ensembles</mark
+            >.
+          </p>
+        </div>
+        <div class="img-block"></div>
+        <div>
+          <p class="subtitle-text">KEY RESULTS</p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <p class="body-text">
+                Simple homogeneous deep ensembles trained with the same
+                objective, architecture and optimization settings minimize
+                worst-case error and the gap between the bottom and top group
+                performance as more models are added.
+              </p>
+            </li>
+            <li>
+              <p class="body-text">
+                This observation holds in both balanced and imbalanced datasets,
+                which suggests that model ensembling can reduce the disparate
+                impact in classification tasks.
+              </p>
+            </li>
+            <li>
+              <p class="body-text">
+                Homogeneous ensembles continue to improve fairness in controlled
+                sensitivity experiments where constructed class imbalance and
+                data perturbation are applied.
+              </p>
+            </li>
+            <li>
+              <p class="body-text">
+                In particular, the minority group benefits more and more as the
+                severity of the corruption increases, while the corruption has
+                very little impact into the majority group&apos;s benefit from
+                model ensembling.
+              </p>
+            </li>
+            <li>
+              <p class="body-text">
+                We further dive into possible causes for this surprising
+                emergence of fairness in homogeneous deep ensembles by measuring
+                model disagreement and by ablating for the different sources of
+                randomness e.g. weight-initialization.
+                <a style="font-weight: 800">
+                  We obtain interesting results: certain distributions of
+                  stochasticty disproportionately benefit bottom-k performance.
+                </a>
+              </p>
+            </li>
+            <li>
+              <p class="body-text">
+                This suggests it is possible to improve the minority group
+                benefits by controlling for those sources of stochasticity
+                between the individual models.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <img src="/fig2.png" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="hbar"></div>
+      <div class="footer-content">
+        <div style="margin-bottom: 16px">
+          <a style="font-weight: 600">Learn More </a>
+        </div>
+        <div style="line-height: 1.25; font-size: 18px">
+          A comprehesive study, methodology, and experimental design can be
+          found in
+          <a
+            href=""
+            target="_blank"
+            style="text-decoration: underline; color: #5963c0"
+          >
+            our paper</a
+          >, open-source
+          <a
+            href=""
+            target="_blank"
+            style="text-decoration: underline; color: #5963c0"
+            >Github code repository</a
+          >, and
+          <a
+            href="https://colab.research.google.com/drive/1kNdgQlJdCAiOaLxYMpLhp0NoAdPZGTpJ?usp=sharing"
+            target="_blank"
+            style="text-decoration: underline; color: #5963c0"
+            >Colab notebook</a
+          >. We are grateful to
+          <a
+            href="https://cohere.for.ai/"
+            target="_blank"
+            style="text-decoration: underline; color: #5963c0"
+            >Cohere for AI</a
+          >
+          for providing the GPU compute resources that have enabled our AI
+          research and development.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
