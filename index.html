@@ -11,7 +11,7 @@
     <main>
       <div class="abstract">
         <div class="subtitle">
-          <p>FEB 15, 2023</p>
+          <p>MAR 01, 2023</p>
         </div>
         <p class="title">
           FAIR-Ensemble: When Fairness Naturally Emerges From Deep Ensembling
@@ -19,7 +19,11 @@
       </div>
       <div class="paper-meta">
         <div class="buttons">
-          <button class="paper-button">
+          <button
+            class="paper-button"
+            onclick="location.href
+            ='https://arxiv.org/abs/2303.00586'"
+          >
             <div class="button-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +75,10 @@
               <div>Paper</div>
             </div>
           </button>
-          <button class="paper-code">
+          <button
+            class="paper-code"
+            onclick="location.href='https://github.com/dsouzadaniel/fair_ensemble'"
+          >
             <div class="button-content">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -198,19 +205,6 @@
             </div>
           </div>
         </div>
-        <div>
-          <div class="paper-meta-2">
-            <div class="subtitle">
-              <p>CITATION</p>
-            </div>
-            <div class="citation-block">
-              <p class="citation-content">
-                Ko, et al., "FAIR-Ensemble: When Fairness Naturally Emerges From
-                Deep Ensembling"
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       <div>
         <div>
@@ -222,7 +216,7 @@
             simple and effective way to improve top-line metrics and often
             outperforms larger single models. In this work, we explore the
             impact of ensembling on subgroup performances, especially when the
-            individual models all share the same trainingset, architecture, and
+            individual models all share the same training set, architecture, and
             design choices e.g. optimizer and regularizers. Surprisingly, even
             with a homogeneous ensemble we find compelling and powerful gains in
             worst-k and minority group performance, i.e. fairness naturally
@@ -244,14 +238,11 @@
           </div>
           <p class="body-text">
             We also explore why this is the case. We find that even in
-            homogeneous ensembles, varying the sources of stochasticity through
-            parameter initialization, mini-batch sampling, and the
-            data-augmentation realizations, results in different fairness
-            outcomes. Our results are the first to our knowledge to
-            <mark
-              >link the source of training randomness to the fairness of the
-              model ensembles</mark
-            >.
+            homogeneous ensembles,
+            <mark> varying the sources of stochasticity </mark>
+            through parameter initialization, mini-batch sampling, and the
+            data-augmentation realizations, results in differentå fairness
+            outcomes.
           </p>
         </div>
         <div class="img-block"></div>
@@ -259,35 +250,26 @@
           <p class="subtitle-text">KEY RESULTS</p>
         </div>
         <div>
-          <ul>
+          <ol>
             <li>
               <p class="body-text">
                 Simple homogeneous deep ensembles trained with the same
                 objective, architecture and optimization settings minimize
                 worst-case error and the gap between the bottom and top group
-                performance as more models are added.
-              </p>
-            </li>
-            <li>
-              <p class="body-text">
-                This observation holds in both balanced and imbalanced datasets,
-                which suggests that model ensembling can reduce the disparate
-                impact in classification tasks.
+                performance as more models are added. This observation holds in
+                both balanced and imbalanced datasets, which suggests that model
+                ensembling can reduce the disparate impact in classification
+                tasks.
               </p>
             </li>
             <li>
               <p class="body-text">
                 Homogeneous ensembles continue to improve fairness in controlled
                 sensitivity experiments where constructed class imbalance and
-                data perturbation are applied.
-              </p>
-            </li>
-            <li>
-              <p class="body-text">
-                In particular, the minority group benefits more and more as the
-                severity of the corruption increases, while the corruption has
-                very little impact into the majority group&apos;s benefit from
-                model ensembling.
+                data perturbation are applied. In particular, the minority group
+                benefits more and more as the severity of the corruption
+                increases, while the corruption has very little impact into the
+                majority group&apos;s benefit from model ensembling.
               </p>
             </li>
             <li>
@@ -300,16 +282,12 @@
                   We obtain interesting results: certain distributions of
                   stochasticty disproportionately benefit bottom-k performance.
                 </a>
-              </p>
-            </li>
-            <li>
-              <p class="body-text">
                 This suggests it is possible to improve the minority group
                 benefits by controlling for those sources of stochasticity
                 between the individual models.
               </p>
             </li>
-          </ul>
+          </ol>
         </div>
         <div>
           <img src="/fig2.png" />
@@ -319,21 +297,58 @@
     <footer>
       <div class="hbar"></div>
       <div class="footer-content">
-        <div style="margin-bottom: 16px">
+        <div>
+          <div class="paper-meta-2">
+            <div class="subtitle">
+              <p>CITATION</p>
+            </div>
+            <div class="citation-block">
+              <p class="citation-content">
+                @misc{https://doi.org/10.48550/ARXIV.2303.00586,
+              </p>
+              <p class="citation-content">doi = {10.48550/ARXIV.2303.00586},</p>
+              <p class="citation-content">
+                url = {https://arxiv.org/abs/2303.00586},
+              </p>
+              <p class="citation-content">
+                author = {Ko, Wei-Yin and D'souza, Daniel and Nguyen, Karina and
+                Balestriero, Randall and Hooker, Sara},
+              </p>
+              <p class="citation-content">
+                keywords = {Machine Learning (stat.ML), Artificial Intelligence
+                (cs.AI), Computer Vision and Pattern Recognition (cs.CV),
+                Computers and Society (cs.CY), Machine Learning (cs.LG), FOS:
+                Computer and information sciences, FOS: Computer and information
+                sciences},
+              </p>
+              <p class="citation-content">
+                title = {FAIR-Ensemble: When Fairness Naturally Emerges From
+                Deep Ensembling},
+              </p>
+              <p class="citation-content">publisher = {arXiv},</p>
+              <p class="citation-content">year = {2023},</p>
+              <p class="citation-content">
+                copyright = {Creative Commons Attribution 4.0 International}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-bottom: 16px; margin-top: 42px">
           <a style="font-weight: 600">Learn More </a>
         </div>
+
         <div style="line-height: 1.25; font-size: 18px">
           A comprehesive study, methodology, and experimental design can be
           found in
           <a
-            href=""
+            href="https://arxiv.org/abs/2303.00586"
             target="_blank"
             style="text-decoration: underline; color: #5963c0"
           >
             our paper</a
           >, open-source
           <a
-            href=""
+            href="https://github.com/dsouzadaniel/fair_ensemble"
             target="_blank"
             style="text-decoration: underline; color: #5963c0"
             >Github code repository</a

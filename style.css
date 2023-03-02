@@ -32,7 +32,7 @@ img {
 
 .paper-meta {
   margin-top: 20px;
-  margin-bottom: 56px;
+  margin-bottom: 24px;
 }
 .buttons {
   display: flex;
@@ -120,6 +120,7 @@ img {
   background-color: rgba(240, 240, 240, 0.486);
   width: 100%;
   max-width: 120ch;
+  padding: 3px;
 }
 
 .citation-content {
